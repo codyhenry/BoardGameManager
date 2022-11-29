@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { ThemeProvider } from "styled-components/native";
+import {
+  useFonts as useInter,
+  Inter_400Regular,
+} from "@expo-google-fonts/inter";
+import {
+  useFonts as usePoppins,
+  Poppins_400Regular,
+} from "@expo-google-fonts/poppins";
+
+import { theme } from "./src/infrastructure/theme";
+import { Navigation } from "./src/infrastructure/navigation/index";
 
 export default function App() {
+  const [interLoaded] = useInter({ Inter_400Regular });
+  const [poppinsLoaded] = useInter({ Poppins_400Regular });
+  if (!interLoaded || !poppinsLoaded) {
+    return null;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <ThemeProvider theme={theme}>
+        <ExpoStatusBar style="auto" />
+      </ThemeProvider>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
