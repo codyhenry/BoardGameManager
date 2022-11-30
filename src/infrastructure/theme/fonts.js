@@ -1,7 +1,7 @@
 //install fonts using expo google fonts and load them in App.js
 export const fonts = {
-  body: "Inter_400Regular",
-  heading: "Poppins_400Regular",
+  body: "Inter",
+  heading: "Poppins",
 };
 
 export const fontWeights = {

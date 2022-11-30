@@ -19,15 +19,11 @@ export const CollectionInfoCard = ({ collection = {} }) => {
         <Info>
           <Section>
             <CustomText variant="label">{name} </CustomText>
-            <SectionEnd>
-              <CustomChip category={collectionTag} />
-            </SectionEnd>
           </Section>
-
           <Section>
             <CustomText variant="caption">{numGames} Items</CustomText>
             <SectionEnd>
-              <CustomText variant="error">Section End</CustomText>
+              <CustomChip category={collectionTag} />
             </SectionEnd>
           </Section>
         </Info>

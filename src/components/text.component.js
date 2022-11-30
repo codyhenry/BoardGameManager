@@ -13,8 +13,10 @@ const body = (theme) => `
     font-size: ${theme.fontSizes.body};
 `;
 
-const hint = (theme) => `
+const title = (theme) => `
+    font-family: ${theme.fonts.heading};
     font-size: ${theme.fontSizes.body};
+    font-weight: ${theme.fontWeights.bold};
 `;
 
 const error = (theme) => `
@@ -37,7 +39,7 @@ const variants = {
   label,
   caption,
   error,
-  hint,
+  title,
 };
 
 export const CustomText = styled.Text`
