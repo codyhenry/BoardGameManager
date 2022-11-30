@@ -2,10 +2,10 @@ import styled from "styled-components/native";
 
 import { Card } from "react-native-paper";
 
-export const GameCard = styled(Card)`
+export const InfoCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
 `;
-export const GameCardCover = styled(Card.Cover)`
+export const InfoCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.spacing.md};
   background-color: ${(props) => props.theme.colors.bg.primary};
 `;
