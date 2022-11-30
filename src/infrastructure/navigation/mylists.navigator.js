@@ -1,10 +1,10 @@
 import React from "react";
-
+/*
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { ListsScreen } from "../../features/mylists/screens/list.screen";
+import { MyListsScreen } from "../../features/mylists/screens/mylists.screen";
 //might rename to collections screen
 import { ListDetailScreen } from "../../features/mylists/screens/list-detail.screen";
-
+*/
 const MylistStack = createNativeStackNavigator();
 export const MylistsNavigator = () => {
   return (
@@ -16,8 +16,8 @@ export const MylistsNavigator = () => {
     >
       <MylistStack.Screen
         name="MyLists"
-        component={ListsScreen}
-        //show all collections in myList tab
+        component={MyListsScreen}
+        //show all collections in myList tab - default page
       />
       <MylistStack.Screen
         name="Collection"
