@@ -1,4 +1,6 @@
-//types of lists: owned, custom (user created titles (dont buy etc)), wishlist, for sale (has price and lowest found, can link with garage sale app), sold (has date), crowdfunding (fund end date, estimated delivery, percentage complete)
+//types of lists: owned, custom (user created titles (dont buy etc)), wishlist, for sale (has price and lowest found, can link with garage sale app), sold (has date), crowdfunding (fund end date, estimated delivery, percentage complete) custom lists can have any tag (owned, wishlist, selling, crowdfunding)
+
+//REMOVE SAFE AREA
 
 import { CustomText } from "../../../components/text.component";
 import { CustomChip } from "../../../components/chip.component";

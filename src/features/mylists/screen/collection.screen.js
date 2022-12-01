@@ -7,10 +7,10 @@ import styled from "styled-components/native";
 import { FlatList, Pressable } from "react-native";
 
 import { Search } from "../components/search.component";
-import { SafeArea } from "../../../components/utility/safe-area.component";
-import { Spacer } from "../../../components/spacer/spacer.component";
-import { GameInfoCard } from "../components/restuarant-info-card.component";
-import { LoadingComponent } from "../../../components/loading/activity-indicator.component";
+import { SafeArea } from "../../../components/safe-area.component";
+import { Spacer } from "../../../components/spacer.component";
+import { CollectionInfoCard } from "../components/collection-info-card.component";
+import { LoadingComponent } from "../../../components/activity-indicator.component";
 
 //import { GamesContext } from "../../../services/restaurants/restaurants.context";
 
@@ -21,7 +21,7 @@ const CollectionsList = styled(FlatList).attrs({
 })``;
 //navigate prop comes from stack navigator
 export const CollectionsScreen = ({ navigation }) => {
-  const { games, isLoading, error } = useContext(GamesContext);
+  const { collections, isLoading, error } = useContext(CollectionsContext);
   return (
     <SafeArea>
       <Search />
@@ -29,17 +29,17 @@ export const CollectionsScreen = ({ navigation }) => {
         <LoadingComponent />
       ) : (
         <CollectionsList
-          data={games}
+          data={collections}
           renderItem={({ item }) => (
             <>
               <Pressable
                 onPress={() =>
-                  navigation.navigate("GameDetail", { game: item })
+                  navigation.navigate("CollectionDetail", { collection: item })
                 }
                 style={({ pressed }) => [{ opacity: pressed ? 0.5 : 1 }]}
               >
                 <Spacer side="bottom" size="md">
-                  <GameInfoCard game={item} />
+                  <CollectionInfoCard collection={item} />
                 </Spacer>
               </Pressable>
             </>

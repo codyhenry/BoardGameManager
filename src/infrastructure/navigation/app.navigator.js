@@ -5,7 +5,7 @@ import { Text } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
-import { CollectionInfoCard } from "../../features/mylists/components/collection-info-card.component";
+import { CollectionsScreen } from "../../features/mylists/screen/collection.screen";
 /*
 import { MylistsNavigator } from "./mylists.navigator";
 import { MarketNavigator } from "./market.navigator";*/
@@ -22,7 +22,6 @@ const TAB_ICON = {
 
 //if header is disabled, wrap these in a safe-area.component - needs import
 const SearchScreen = () => <Text>Search</Text>;
-const MyListsScreen = () => <Text>Search</Text>;
 const MarketScreen = () => <Text>Search</Text>;
 
 export const AppNavigator = () => (
@@ -43,7 +42,7 @@ export const AppNavigator = () => (
         //The tabs will contain screens for stack navigation components
         //Need tab for myLists, Market, Settings, Search
         name="Lists"
-        component={CollectionInfoCard}
+        component={CollectionsScreen}
       />
       <Tab.Screen name="Market" component={MarketScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />

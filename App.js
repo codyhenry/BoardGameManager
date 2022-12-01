@@ -5,6 +5,8 @@ import { useFonts as usePoppins, Poppins } from "@expo-google-fonts/poppins";
 import { theme } from "./src/infrastructure/theme";
 import { Navigation } from "./src/infrastructure/navigation/index";
 
+import { Text } from "react-native";
+
 export default function App() {
   const [interLoaded] = useInter({ Inter });
   const [poppinsLoaded] = usePoppins({ Poppins });
